@@ -24,9 +24,9 @@ if __name__ == '__main__':
     engine = QQmlApplicationEngine()
     engine.rootContext().setContextProperty("createWellButton", createWellButton)
 
-    engine.addImportPath("pipmate_old/pipmate/imports")
+    engine.addImportPath("pipmate/imports")
 
-    engine.load(QUrl("pipmate_old/pipmate/qml/pages/welcome_screen_window.qml"))
+    engine.load(QUrl("pipmate/qml/pages/welcome_screen_window.qml"))
     
     if not engine.rootObjects():
         sys.exit(-1)
