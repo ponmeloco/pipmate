@@ -1,14 +1,15 @@
+
+
 /*
 This is a UI file (.ui.qml) that is intended to be edited in Qt Design Studio only.
 It is supposed to be strictly declarative and only uses a subset of QML. If you edit
 this file manually, you might introduce QML code that is not supported by Qt Design Studio.
 Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on .ui.qml files.
 */
-
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import Pipmate_GUI 1.0
-import QtQuick.Layouts
+import QtQuick.Layouts 1.15
 
 Rectangle {
     id: welcome_screen_rectangle
@@ -19,10 +20,6 @@ Rectangle {
     layer.enabled: false
     antialiasing: true
     clip: false
-
-
-
-
 
     Label {
         id: background_image_label
@@ -41,7 +38,7 @@ Rectangle {
         AnimatedImage {
             id: background_bubble_animation
             anchors.fill: parent
-            source: "images/background_bubble_animation.gif"
+            source: "../../assets/images/background_bubble_animation.gif"
             playing: true
             paused: false
             transformOrigin: Item.Left
@@ -56,13 +53,22 @@ Rectangle {
         }
     }
 
-
-
     Button {
         id: create_new_well_button
         width: 150
         height: 45
+        background: Rectangle {
+            color: create_new_well_button.pressed ? "#C0808080" : "#80808080" // Change colors as needed
+            radius: height / 2 // Makes the button fully rounded
+        }
         text: qsTr("Create new Well")
+        contentItem: Text {
+            text: parent.text
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            color: "#ffffff" // Set your desired color here
+            anchors.centerIn: parent
+        }
         anchors.verticalCenter: parent.verticalCenter
         font.pointSize: 12
         anchors.horizontalCenter: parent.horizontalCenter
@@ -93,9 +99,8 @@ Rectangle {
 
         ListView {
             id: last_used_list_view
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
+            width: 100
+            height: 100
             clip: true
             keyNavigationWraps: false
             orientation: ListView.Vertical
@@ -152,8 +157,8 @@ Rectangle {
                     }
                 }
             }
-            Layout.preferredWidth: 110
-            Layout.preferredHeight: 160
+            Layout.preferredWidth: 100
+            Layout.preferredHeight: 100
         }
     }
 
@@ -178,7 +183,7 @@ Rectangle {
         Text {
             id: slogan_text
             color: "#ffffff"
-            text: qsTr("Where Every Experiment Finds Its Mate.")
+            text: qsTr("Where every experiment finds its mate.")
             font.pixelSize: 12
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
@@ -186,10 +191,4 @@ Rectangle {
             Layout.leftMargin: 3
         }
     }
-
-
-
-
 }
-
-
