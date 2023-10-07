@@ -1,8 +1,8 @@
 import QmlProject 1.1
 
 Project {
-    mainFile: "content/App.qml"
-    mainUiFile: "content/Welcome_Screen.ui.qml"
+    mainFile: "content/welcome_screen_window.qml"
+    mainUiFile: "content/Welcome_Screen_frame.ui.qml"
 
     /* Include .qml, .js, and image files from current directory and subdirectories */
     QmlFiles {

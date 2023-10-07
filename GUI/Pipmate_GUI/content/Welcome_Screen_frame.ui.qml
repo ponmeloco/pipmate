@@ -11,7 +11,7 @@ import Pipmate_GUI 1.0
 import QtQuick.Layouts
 
 Rectangle {
-    id: main_frame
+    id: welcome_screen_rectangle
     width: 1000
     height: 600
     color: "#1978a5"
@@ -42,6 +42,8 @@ Rectangle {
             id: background_bubble_animation
             anchors.fill: parent
             source: "images/background_bubble_animation.gif"
+            playing: true
+            paused: false
             transformOrigin: Item.Left
             scale: 1
             autoTransform: false
@@ -49,7 +51,7 @@ Rectangle {
             cache: false
             clip: false
             antialiasing: true
-            speed: 0.6
+            speed: 1.2
             fillMode: Image.Stretch
         }
     }
@@ -62,6 +64,7 @@ Rectangle {
         height: 45
         text: qsTr("Create new Well")
         anchors.verticalCenter: parent.verticalCenter
+        font.pointSize: 12
         anchors.horizontalCenter: parent.horizontalCenter
         Layout.minimumHeight: 30
         Layout.minimumWidth: 100
@@ -75,14 +78,14 @@ Rectangle {
         height: 150
         anchors.left: parent.left
         anchors.bottom: parent.bottom
-        anchors.leftMargin: 50
-        anchors.bottomMargin: 50
+        anchors.leftMargin: 100
+        anchors.bottomMargin: 100
         Text {
             id: last_used_text
             color: "#ffffff"
             text: qsTr("Last used:")
             font.pixelSize: 12
-            Layout.bottomMargin: 0
+            Layout.bottomMargin: 5
             Layout.alignment: Qt.AlignLeft | Qt.AlignTop
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -97,7 +100,7 @@ Rectangle {
             keyNavigationWraps: false
             orientation: ListView.Vertical
             layoutDirection: Qt.LeftToRight
-            snapMode: ListView.SnapOneItem
+            snapMode: ListView.NoSnap
             cacheBuffer: 320
             anchors.bottomMargin: 0
             boundsMovement: Flickable.FollowBoundsBehavior
@@ -156,26 +159,31 @@ Rectangle {
 
     ColumnLayout {
         id: base_text_column_layout
-        x: 50
-        y: 141
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.rightMargin: 628
+        anchors.topMargin: 100
+        anchors.leftMargin: 100
         Text {
             id: welcome_text
             color: "#ffffff"
             text: qsTr("Welcome to pipmate")
             horizontalAlignment: Text.AlignLeft
-            verticalAlignment: Text.AlignVCenter
+            verticalAlignment: Text.AlignTop
+            font.italic: false
             font.pointSize: 30
         }
 
         Text {
-            id: version_text
+            id: slogan_text
             color: "#ffffff"
-            text: qsTr("PreAlpha Version 0.1")
+            text: qsTr("Where Every Experiment Finds Its Mate.")
             font.pixelSize: 12
             horizontalAlignment: Text.AlignLeft
-            verticalAlignment: Text.AlignVCenter
+            verticalAlignment: Text.AlignTop
             Layout.margins: 0
-            Layout.leftMargin: 10
+            Layout.leftMargin: 3
         }
     }
 
