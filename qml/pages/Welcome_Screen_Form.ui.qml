@@ -8,7 +8,6 @@ Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on
 */
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import Pipmate_GUI 1.0
 import QtQuick.Layouts 1.15
 
 Rectangle {

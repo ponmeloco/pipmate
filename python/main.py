@@ -11,8 +11,6 @@ if __name__ == '__main__':
     # Creates a QQmlApplicationEngine instance
     engine = QQmlApplicationEngine()  
 
-    # Sets the path to the Pipmate_GUI
-    engine.addImportPath("imports") 
 
     # Sets the starting qml file for the application
     starting_qml_file_path = "qml/pages/Welcome_Screen_Logic.qml"
@@ -25,4 +23,4 @@ if __name__ == '__main__':
         sys.exit(-1)
 
     # Starts the application's event loop
-    sys.exit(pipmate_app.exec_())  
+    sys.exit(pipmate_app.exec())  
