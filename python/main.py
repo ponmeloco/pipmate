@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtCore import QUrl
-from PyQt5.QtGui import QGuiApplication
-from PyQt5.QtQml import QQmlApplicationEngine
+from PyQt6.QtCore import QUrl
+from PyQt6.QtGui import QGuiApplication
+from PyQt6.QtQml import QQmlApplicationEngine
 
 if __name__ == '__main__':
 
@@ -12,10 +12,10 @@ if __name__ == '__main__':
     engine = QQmlApplicationEngine()  
 
     # Sets the path to the Pipmate_GUI
-    engine.addImportPath("pipmate/imports") 
+    engine.addImportPath("imports") 
 
     # Sets the starting qml file for the application
-    starting_qml_file_path = "pipmate/qml/pages/Welcome_Screen_Logic.qml"
+    starting_qml_file_path = "qml/pages/Welcome_Screen_Logic.qml"
 
     # Loads the engine with the set filepath
     engine.load(QUrl.fromLocalFile(starting_qml_file_path))
