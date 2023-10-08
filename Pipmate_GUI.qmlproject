@@ -1,32 +1,20 @@
 import QmlProject 1.1
 
 Project {
-    mainFile: "qml/pages/welcome_screen_window.qml"
-    mainUiFile: "qml/pages/Welcome_Screen_frame.ui.qml"
+    mainFile: "qml/pages/Welcome_Screen_Logic.qml"
+    mainUiFile: "qml/pages/Welcome_Screen_Form.ui.qml"
 
     /* Include .qml, .js, and image files from current directory and subdirectories */
     QmlFiles {
-        directory: "qml/pages"
+        directory: "qml"
     }
 
     QmlFiles {
-        directory: "imports"
-    }
-
-    JavaScriptFiles {
-        directory: "content"
-    }
-
-    JavaScriptFiles {
         directory: "imports"
     }
 
     ImageFiles {
         directory: "assets/images"
-    }
-
-    ImageFiles {
-        directory: "asset/images"
     }
 
     Files {
@@ -36,7 +24,7 @@ Project {
 
     Files {
         filter: "qmldir"
-        directory: "."
+        directory: "imports"
     }
 
     Files {
@@ -61,11 +49,6 @@ Project {
 
     Files {
         filter: "*.mesh"
-        directory: "assets"
-    }
-
-    Files {
-        filter: "*.qml"
         directory: "assets"
     }
 

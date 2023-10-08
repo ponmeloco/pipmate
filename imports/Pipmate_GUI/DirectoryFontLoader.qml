@@ -7,8 +7,8 @@ import Qt.labs.folderlistmodel 2.15
 QtObject {
     id: loader
 
-    property url fontDirectory: Qt.resolvedUrl("../../assets/fonts")
-    property string relativeFontDirectory: "fonts"
+    property url fontDirectory: Qt.resolvedUrl("assets/fonts")
+    property string relativeFontDirectory: "pipmate/assets/fonts"
 
     function loadFont(url) {
         var fontLoader = Qt.createQmlObject('import QtQuick 2.15; FontLoader { source: "' + url + '"; }',

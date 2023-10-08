@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtDesignStudio 4.3.0, 2023-10-07T22:57:22. -->
+<!-- Written by QtDesignStudio 4.3.0, 2023-10-08T01:47:40. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -55,6 +55,14 @@
    <value type="bool" key="EditorConfiguration.inEntireDocument">false</value>
    <value type="bool" key="EditorConfiguration.skipTrailingWhitespace">true</value>
    <value type="bool" key="EditorConfiguration.tintMarginArea">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>ProjectExplorer.Project.PluginSettings</variable>
+  <valuemap type="QVariantMap">
+   <valuemap type="QVariantMap" key="CppEditor.QuickFix">
+    <value type="bool" key="UseGlobalSettings">true</value>
+   </valuemap>
   </valuemap>
  </data>
  <data>

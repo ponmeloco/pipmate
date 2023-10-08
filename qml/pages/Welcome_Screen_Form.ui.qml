@@ -21,6 +21,8 @@ Rectangle {
     antialiasing: true
     clip: false
 
+    property alias _create_new_well_button: create_new_well_button
+
     Label {
         id: background_image_label
         x: 50
